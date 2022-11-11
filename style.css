@@ -61,6 +61,9 @@ html {
 .info_song {
     width: 100%;
     height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .info_song .thumbnail {
@@ -81,9 +84,6 @@ html {
     /* margin-top: 30px; */
     width: 100%;
     height: max-content;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
 .info_song .song .name-song {
