@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --bs-bgc: #383838;
+    --bs-gray: #232323;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bs-bgc);
+}
+
+.card {
+    width: 420px;
+    height: 580px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--bs-gray);
+    box-shadow: 10px 10px 20px 10px #4d4d4d, -10px -10px 20px 10px #4d4d4d;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .logo,
+.nav .icon-menu {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav .logo {
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+}
+
+.info_song {
+    width: 100%;
+    height: max-content;
+    margin-top: 20px;
+}
+
+.info_song .thumbnail {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.info_song .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info_song .song {
+    margin-top: 30px;
+    width: 100%;
+    height: max-content;
+}
+
+.info_song .song .name-song {
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+.info_song .song .author {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Dancing Script", cursive;
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.info_song .song .time-song {
+    width: 100%;
+}
+
+.time-song input {
+    margin: 10px 0;
+    width: 100%;
+    height: 10px;
+}
+
+.time-song .display-time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-song .display-time .current-time,
+.time-song .display-time .time {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.card .action {
+    list-style: none;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.action .action-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.action .action-icon button {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(29, 167, 167, 0.737);
+    border: none;
+    font-size: 23px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.action .action-icon button:hover {
+    transform: scale(1.1);
+    transition: all 200ms linear;
+}
+.card .wrapper-music {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* overflow-y: scroll; */
+}
+
+.card .wrapper-music .list-music {
+    list-style: none;
+}
+
+.list-music li {
+    width: 100%;
+    height: max-content;
+    padding: 5px 0;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--bs-bgc);
+    color: var(--bs-gray);
+}
+
+.list-music li .name-music {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.list-music li .author-music {
+    font-size: 14px;
+    font-weight: 500;
+}
+.icon-close {
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+.hidden {
+    z-index: -10;
+}
+@media screen and (max-width: 600px) {
+    .card {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .info_song {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .info_song .thumbnail {
+        width: 300px;
+        height: 300px;
+    }
+}
